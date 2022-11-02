@@ -13,7 +13,7 @@ try {
             let fileExt = path.parse(path.join(src, file.name)).ext.slice(1);
             let fileSize = (await fs.stat(path.join(src, file.name))).size/1024;
 
-            console.log(`${fileName} - ${fileExt} - ${Math.ceil(fileSize)}kb`);
+            console.log(`${fileName} - ${fileExt} - ${fileSize}kb`);
         }
     }
   } catch (err) {
