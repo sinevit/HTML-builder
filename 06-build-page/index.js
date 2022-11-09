@@ -30,6 +30,7 @@ const dist =  path.join(__dirname, '/project-dist');
 //копирование assets
 (async function copyAssetsFiles(src, dist ){
     try {
+        await fs.rm(dist, { recursive: true, force: true });
         //создает папку /project-dist
         const copyFolder =  await fs.mkdir( dist, { recursive: true });
         //читает папку /assets    
